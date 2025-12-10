@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const contactSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
-    email: { type: String, required: true },
-    phone: { type: String },
+    email: { type: String, required: true,unique:true },
+    phone: { type: String ,unique:true},
     service: { type: String, required: true },
     message: { type: String, required: true },
   },
